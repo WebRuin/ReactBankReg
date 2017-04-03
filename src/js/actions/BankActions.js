@@ -8,3 +8,9 @@ export function addEntry(amount, desc, memo) {
     memo
   });
 }
+
+export function fetchRegister() {
+  dispatcher.dispatch({
+    type: "FETCH_REGISTER"
+  })
+}

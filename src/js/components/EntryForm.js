@@ -9,7 +9,7 @@ export default class EntryForm extends React.Component {
   handleSubmit() {
     event.preventDefault();
 
-    const amount = parseInt(this.refs.amount.value);
+    const amount = parseFloat(this.refs.amount.value);
     const desc = this.refs.desc.value;
     const memo = this.refs.memo.value;
 

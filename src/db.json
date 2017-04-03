@@ -1,0 +1,53 @@
+{
+  "register": [
+    {
+      "amount": 1000000,
+      "date": "03/02/2017",
+      "desc": "Opened Million Dollar Account",
+      "id": 113464613,
+      "memo": ""
+    },
+    {
+      "amount": -20,
+      "date": "03/01/2017",
+      "desc": "Cash Withdraw",
+      "id": 394512764,
+      "memo": ""
+    },
+    {
+      "amount": 10000,
+      "date": "03/04/2017",
+      "desc": "Web job - XYZ Corp",
+      "id": "7c18679c-2fe2-42c5-87be-24e913ae4432",
+      "memo": ""
+    },
+    {
+      "amount": 3567,
+      "date": "03/04/2017",
+      "desc": "Web job - XYZ Corp",
+      "id": "c05b2040-bfd6-4579-b452-39be907c4826",
+      "memo": ""
+    },
+    {
+      "amount": -1000000,
+      "date": "03/04/2017",
+      "desc": "New House",
+      "id": "4f6c3def-237f-46b7-a5db-9852f56f3acf",
+      "memo": ""
+    },
+    {
+      "amount": -59.99,
+      "date": "03/04/2017",
+      "desc": "Gas",
+      "id": "06236a3c-8ecd-4861-af70-0261e5e49876",
+      "memo": ""
+    },
+    {
+      "amount": 19.50,
+      "date": "03/04/2017",
+      "desc": "Cigarettes",
+      "id": "1f8a031d-c39d-45f7-af5d-fcd2fac3bfcd",
+      "memo": ""
+    }
+  ]
+}

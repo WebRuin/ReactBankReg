@@ -1,28 +1,29 @@
-import uuid from "uuid/v4"
+import uuid from "uuid/v4";
 import { EventEmitter } from "events";
+import axios from "axios";
 
 import dispatcher from "../dispatcher";
 
 class BankStore extends EventEmitter {
   constructor() {
     super()
-    this.register = [
-      {
-        amount: -20.00,
-        date: 394512764,
-        desc: "Cash WithDraw",
-        id: 394512764,
-        memo: ""
-      },
-      {
-        amount: 1000000.00,
-        date: 113464613,
-        desc: "Opened Million Dollar Account",
-        id: 113464613,
-        memo: ""
+    this.register = [];
+  }
 
-      },
-    ];
+  fetchRegister() {
+    let th = this
+    this.serverRequest =
+      axios.get('http://localhost:3000/register')
+        .then(function(result) {
+          result.data.map((entry) => {
+            th.fetchRegistryFromDB(entry)
+          })
+        })
+  }
+
+  fetchRegistryFromDB(entry) {
+    this.register.unshift(entry)
+    this.emit("change")
   }
 
   addEntry(amount, desc, memo) {
@@ -48,6 +49,16 @@ class BankStore extends EventEmitter {
       memo
     });
 
+    const entry = {
+      amount,
+      date,
+      desc,
+      id,
+      memo
+    };
+
+    axios.post('http://localhost:3000/register', entry)
+
     this.emit("change");
   }
 
@@ -59,6 +70,10 @@ class BankStore extends EventEmitter {
     switch(action.type) {
       case "ADD_ENTRY": {
         this.addEntry(action.amount, action.desc, action.memo);
+        break;
+      }
+      case "FETCH_REGISTER": {
+        this.fetchRegister();
         break;
       }
     }

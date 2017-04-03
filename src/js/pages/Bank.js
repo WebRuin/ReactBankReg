@@ -19,6 +19,7 @@ export default class Featured extends React.Component {
   }
 
   componentWillMount() {
+    BankActions.fetchRegister();
     BankStore.on("change", this.getRegister);
   }
 
@@ -52,7 +53,7 @@ export default class Featured extends React.Component {
         <div className="register">
           <div className="bankTotalLine">
             <div>Avalible Balance</div>
-            <div className="total">${registerTotal}</div>
+            <div className="total">${registerTotal.toLocaleString()}</div>
           </div>
           {BankRegisteries}
         </div>
