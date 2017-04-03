@@ -1,0 +1,26 @@
+.entryForm {
+  width: 30%;
+  display: flex;
+  padding: 1rem;
+  padding-top: 0;
+
+  form {
+    width: 100%;
+
+    .formElement {
+      display: flex;
+      margin: 1rem 0;
+      justify-content: space-between;
+
+      label {
+        display: block;
+      }
+
+      input,
+      textarea {
+        margin-left: auto;
+        width: 75%;
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import uuid from "uuid/v4"
 import { EventEmitter } from "events";
 
 import dispatcher from "../dispatcher";
@@ -7,43 +8,57 @@ class BankStore extends EventEmitter {
     super()
     this.register = [
       {
-        id: 113464613,
-        text: "Go Shopping",
-        complete: false
+        amount: -20.00,
+        date: 394512764,
+        desc: "Cash WithDraw",
+        id: 394512764,
+        memo: ""
       },
       {
-        id: 235684679,
-        text: "Pay Water Bill",
-        complete: false
+        amount: 1000000.00,
+        date: 113464613,
+        desc: "Opened Million Dollar Account",
+        id: 113464613,
+        memo: ""
+
       },
     ];
   }
 
-  createTodo(text) {
-    const id = Date.now();
+  addEntry(amount, desc, memo) {
+    const id = uuid();
+    var date = new Date();
+    var dd = date.getDate();
+    var mm = date.getMonth()+1; //January is 0!
 
-    this.todos.push({
+    var yyyy = date.getFullYear();
+    if(dd<10){
+        dd='0'+dd;
+    }
+    if(mm<10){
+        mm='0'+mm;
+    }
+    var date = dd+'/'+mm+'/'+yyyy;
+
+    this.register.unshift({
+      amount,
+      date,
+      desc,
       id,
-      text,
-      complete: false,
+      memo
     });
 
     this.emit("change");
   }
 
   getAll() {
-    return this.todos;
+    return this.register;
   }
 
   handleActions(action) {
     switch(action.type) {
-      case "CREATE_TODO": {
-        this.createTodo(action.text);
-        break;
-      }
-      case "RECEIVE_TODOS": {
-        this.todos = action.todos;
-        this.emit("change");
+      case "ADD_ENTRY": {
+        this.addEntry(action.amount, action.desc, action.memo);
         break;
       }
     }

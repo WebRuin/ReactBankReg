@@ -1,0 +1,25 @@
+.entry {
+  display: flex;
+  padding: 1rem;
+
+  .date {
+    padding-right: 8rem;
+  }
+
+  .amount {
+    margin-left: auto;
+  }
+
+  &.debit {
+    border-bottom: 1px solid black;
+
+    .amount {
+      color: #750000;
+    }
+  }
+
+  &.credit {
+    background-color: #93ea93;
+    border-bottom: 1px solid black;
+  }
+}
