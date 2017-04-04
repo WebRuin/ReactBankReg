@@ -43,10 +43,45 @@
       "memo": ""
     },
     {
-      "amount": 19.50,
+      "amount": -19.5,
       "date": "03/04/2017",
       "desc": "Cigarettes",
       "id": "1f8a031d-c39d-45f7-af5d-fcd2fac3bfcd",
+      "memo": ""
+    },
+    {
+      "amount": -8.96,
+      "date": "03/04/2017",
+      "desc": "7-11 - Snack",
+      "id": "4adaa027-ba82-4e4a-8c9c-804dfc9b2c47",
+      "memo": ""
+    },
+    {
+      "amount": -50,
+      "date": "03/04/2017",
+      "desc": "Cable",
+      "id": "ffc5138a-0aa5-4411-beca-79b32b6fa073",
+      "memo": ""
+    },
+    {
+      "amount": -50,
+      "date": "03/04/2017",
+      "desc": "Cable",
+      "id": "aacaa2a6-115f-4346-95e1-04bc531a4de5",
+      "memo": ""
+    },
+    {
+      "amount": -68.65,
+      "date": "03/04/2017",
+      "desc": "Gas",
+      "id": "7e175f8e-2163-4799-8368-e82280ca1117",
+      "memo": ""
+    },
+    {
+      "amount": 2000,
+      "date": "03/04/2017",
+      "desc": "Pay",
+      "id": "178c9c2f-d5df-4a35-bde5-1864cdda52c6",
       "memo": ""
     }
   ]

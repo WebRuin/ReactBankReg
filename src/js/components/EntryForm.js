@@ -8,10 +8,13 @@ export default class EntryForm extends React.Component {
 
   handleSubmit() {
     event.preventDefault();
+    let checkbox = document.querySelector(".checkbox").checked;
 
-    const amount = parseFloat(this.refs.amount.value);
+    let amount = parseFloat(this.refs.amount.value);
     const desc = this.refs.desc.value;
     const memo = this.refs.memo.value;
+
+    if (!checkbox) amount = amount * (-1);
 
     BankActions.addEntry(amount, desc, memo);
 
@@ -33,6 +36,12 @@ export default class EntryForm extends React.Component {
           <div className="formElement">
             <lable htmlFor="memo">Memo</lable>
             <textarea ref="memo" idName="memo" />
+          </div>
+          <div>
+            <label className="switch">Debit
+              <input className="checkbox" type="checkbox" />
+              <div className="slider"></div>
+            </label>
           </div>
 
           <input type="submit" value="Add Entry" />
