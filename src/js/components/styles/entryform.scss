@@ -1,11 +1,47 @@
-.entryForm {
+.entryFormWrapper {
   width: 30%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.75);
+
+  .accountTotal {
+    padding: 1rem;
+    font-size: 1.75rem;
+
+    .totalGreen,
+    .totalRed {
+      font-size: 2rem;
+      padding-top: 0.5rem;
+    }
+
+    .totalGreen {
+      color: #117511;
+    }
+
+    .totalRed {
+      color: #d06565;
+    }
+  }
+}
+
+.entryForm {
   display: flex;
   padding: 1rem;
   padding-top: 0;
 
   form {
     width: 100%;
+
+    .formButton {
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: 0.5rem;
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      background-color: #aaa;
+    }
 
     .formElement {
       display: flex;
@@ -25,7 +61,7 @@
   }
 
   .switch {
-    margin-left: 85%;
+    margin-left: 84%;
     position: relative;
     display: inline-block;
     width: 60px;
@@ -51,7 +87,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: #d06565;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -69,11 +105,11 @@
   }
 
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #117511;
   }
 
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #117511;
   }
 
   input:checked + .slider:before {

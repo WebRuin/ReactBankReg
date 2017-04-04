@@ -83,6 +83,20 @@
       "desc": "Pay",
       "id": "178c9c2f-d5df-4a35-bde5-1864cdda52c6",
       "memo": ""
+    },
+    {
+      "amount": -200000,
+      "date": "03/04/2017",
+      "desc": "",
+      "id": "f4a3f2d7-2e78-495c-9287-5023effa581c",
+      "memo": ""
+    },
+    {
+      "amount": 2000000,
+      "date": "03/04/2017",
+      "desc": "Lotto",
+      "id": "51bda78e-355e-4d92-9b81-d3f46b8ae912",
+      "memo": ""
     }
   ]
 }

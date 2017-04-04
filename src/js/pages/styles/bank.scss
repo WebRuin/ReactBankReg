@@ -5,6 +5,10 @@
 
 .register {
   width: 60%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 6px 15px 0px rgba(0,0,0,0.75);
 
   .bankTotalLine {
     display: flex;

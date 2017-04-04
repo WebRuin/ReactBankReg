@@ -33,10 +33,6 @@ export default class Featured extends React.Component {
     });
   }
 
-  reloadTodos() {
-    BankActions.reloadTodos();
-  }
-
   render() {
     const { register } = this.state;
     let registerTotal = 0;
@@ -52,7 +48,7 @@ export default class Featured extends React.Component {
 
         <div className="register">
           <div className="bankTotalLine">
-            <div>Avalible Balance</div>
+            <div>Available Balance</div>
             <div className="total">${registerTotal.toLocaleString()}</div>
           </div>
           {BankRegisteries}
