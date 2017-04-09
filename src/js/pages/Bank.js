@@ -9,7 +9,7 @@ import RegistryEntry from "../components/RegistryEntry";
 import EntryForm from "../components/EntryForm";
 
 
-export default class Featured extends React.Component {
+export default class Bank extends React.Component {
   constructor() {
     super();
     this.getRegister = this.getRegister.bind(this);

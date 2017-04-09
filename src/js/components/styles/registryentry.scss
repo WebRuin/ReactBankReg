@@ -23,3 +23,25 @@
     border-bottom: 1px solid black;
   }
 }
+
+
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .entry .date {
+      padding-right: 1rem;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    .entry .date {
+      padding-right: 4rem;
+    }
+}
