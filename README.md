@@ -4,6 +4,8 @@
 Steps to install
 > You will need NodeJS installed [Install Here](https://nodejs.org/en/download/)
 
+> You will need Git CLI installed [Install Here](https://help.github.com/articles/set-up-git/)
+
 1. Clone the repo
    ```
     git clone git@github.com:WebRuin/ReactBankReg.git
