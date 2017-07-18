@@ -36,7 +36,6 @@ export default class Bank extends React.Component {
   render() {
     const { register } = this.state;
     let registerTotal = 0;
-
     const BankRegisteries = register.map((entry) => {
       registerTotal += entry.amount
       return <RegistryEntry key={entry.id} {...entry}/>;
